@@ -18,7 +18,7 @@ function SiteLayout() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
       <nav className="fixed inset-x-0 top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2">
           <Link to="/" className="flex items-center gap-3">
             <div className="h-8 w-8 overflow-hidden rounded-full border border-white/20">
               <img src="/rr3.jpeg" alt="RR" className="h-full w-full object-cover" />
@@ -52,7 +52,7 @@ function SiteLayout() {
             </div>
           </button>
 
-          <div className="hidden items-center gap-6 text-sm font-medium text-slate-200 sm:flex">
+          <div className="hidden items-center gap-5 text-sm font-medium text-slate-200 sm:flex">
             {links.map((link) => (
               <NavLink
                 key={link.to}
@@ -93,7 +93,7 @@ function SiteLayout() {
         </div>
       )}
 
-      <main className="pt-24 sm:pt-28 lg:pt-32">
+      <main className="pt-20 sm:pt-24 lg:pt-28">
         <Outlet />
       </main>
 

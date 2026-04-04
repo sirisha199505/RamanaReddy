@@ -17,7 +17,7 @@ const featuredMedia = [
 
 function Home() {
   return (
-    <div className="relative mx-auto max-w-7xl px-4 pb-12">
+    <div className="relative mx-auto mt-4 max-w-7xl px-4 pb-12">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(251,191,36,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(14,165,233,0.18),transparent_30%)]" />
 
       <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] backdrop-blur">
