@@ -6,6 +6,7 @@ import Ott from './pages/Ott'
 import Television from './pages/Television'
 import Theatre from './pages/Theatre'
 import Contact from './pages/Contact'
+import Gallery from './pages/Gallery'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       <Route element={<SiteLayout />}>
         <Route index element={<Home />} />
+        <Route path="gallery" element={<Gallery />} />
         <Route path="films" element={<Films />} />
         <Route path="ott" element={<Ott />} />
         <Route path="television" element={<Television />} />
