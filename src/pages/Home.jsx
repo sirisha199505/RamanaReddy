@@ -8,6 +8,13 @@ const stats = [
   { label: 'Stage', value: '2' },
 ]
 
+const featuredMedia = [
+  { type: 'image', src: '/rr1.jpeg', alt: 'On-set still' },
+  { type: 'image', src: '/rr2.jpeg', alt: 'Portrait', objectPosition: '50% 25%' },
+  { type: 'image', src: '/rr3.jpeg', alt: 'Studio look' },
+  { type: 'video', src: '/rr1 video.mp4', alt: 'Showreel clip' },
+]
+
 function Home() {
   return (
     <div className="relative mx-auto max-w-7xl px-4 pb-12">
@@ -119,6 +126,54 @@ function Home() {
           Collaborative on set; quick with dialogue pickups; flexible between comedic timing and intense action beats; experienced
           working alongside veteran casts and directors. Open to film, OTT, and television projects with a preference for character-driven roles.
         </p>
+      </section>
+
+      <section className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+        <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-amber-200/80">Gallery</p>
+            <h2 className="text-lg font-semibold text-white">Stills & Reels</h2>
+          </div>
+          <a
+            href="/gallery"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 hover:text-amber-100"
+          >
+            View full gallery →
+          </a>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredMedia.map((item, idx) => (
+            <div
+              key={idx}
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 shadow-[0_12px_30px_-18px_rgba(0,0,0,0.7)]"
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                {item.type === 'image' ? (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    style={item.objectPosition ? { objectPosition: item.objectPosition } : undefined}
+                    loading="lazy"
+                  />
+                ) : (
+                  <video
+                    src={item.src}
+                    className="h-full w-full object-cover"
+                    controls
+                    preload="metadata"
+                  />
+                )}
+              </div>
+              <div className="flex items-center justify-between px-3 py-2 text-xs text-slate-200/80">
+                <span>{item.alt}</span>
+                <span className="rounded-full bg-amber-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-200">
+                  {item.type}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )
