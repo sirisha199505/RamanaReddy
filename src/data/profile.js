@@ -14,6 +14,10 @@ export const films = [
   'Nene Raju Nene Mantri',
   'Rangamarthanda',
   'Veera Simha Reddy',
+  'Raju Weds Rambai',
+  'anaganaga oka raju',
+
+
 ]
 
 export const webSeries = [

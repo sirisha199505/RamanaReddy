@@ -2,7 +2,7 @@ import SectionCard from '../components/SectionCard'
 import { contact, films, memberships, theatre, tvShows, webSeries } from '../data/profile'
 
 const stats = [
-  { label: 'Feature films', value: '15+' },
+  { label: 'Feature films', value: '100+' },
   { label: 'OTT originals', value: '3' },
   { label: 'Television shows', value: '3' },
   { label: 'Stage', value: '2' },
@@ -104,11 +104,13 @@ function Home() {
         </div>
       </section>
 
-      <section className="relative mt-8 space-y-4">
+      <section className="relative mt-8 grid gap-4 lg:grid-cols-[1.1fr_1fr]">
         <SectionCard title="Feature Films (selected)" items={films} />
-        <SectionCard title="Web Series" items={webSeries} />
-        <SectionCard title="Television" items={tvShows} />
-        <SectionCard title="Theatre" items={theatre} />
+        <div className="space-y-4">
+          <SectionCard title="Web Series" items={webSeries} />
+          <SectionCard title="Television" items={tvShows} />
+          <SectionCard title="Theatre" items={theatre} />
+        </div>
       </section>
 
       <section className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
