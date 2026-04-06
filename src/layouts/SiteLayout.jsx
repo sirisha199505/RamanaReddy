@@ -120,7 +120,7 @@ function SiteLayout() {
             Design inspired by{' '}
             <a
               className="underline decoration-amber-400/70 decoration-2 underline-offset-2"
-              href="https://my-portfolio-c9t9i2q76-sirisha199505s-projects.vercel.app/"
+              href="https://my-portfolio-dusky-chi-48.vercel.app/"
               target="_blank"
               rel="noreferrer"
             >
