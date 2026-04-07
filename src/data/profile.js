@@ -40,7 +40,7 @@ export const memberships = [
 ]
 
 export const contact = {
-  phones: ['9949871797', '7780218111'],
+  phones: ['9949871797',],
   email: 'pramanareddy899@gmail.com',
   instagram: 'https://www.instagram.com/actor_ramanareddy_purelli',
   facebook: 'https://www.facebook.com/share/18H7oQECYg/?mibextid=wwXIfr',
