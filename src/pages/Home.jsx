@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SectionCard from '../components/SectionCard'
 import { contact, films, memberships, theatre, tvShows, webSeries } from '../data/profile'
 
@@ -17,7 +18,7 @@ const featuredMedia = [
 
 function Home() {
   return (
-    <div className="relative mx-auto mt-4 max-w-7xl px-4 pb-12">
+    <div className="relative max-w-7xl px-4 pb-12">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(251,191,36,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(14,165,233,0.18),transparent_30%)]" />
 
       <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 p-8 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] backdrop-blur">
@@ -42,11 +43,11 @@ function Home() {
               <div className="text-sm text-slate-200/80">@actor_ramanareddy_purelli</div>
             </div>
             <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
-              Telugu film, OTT, and television actor delivering grounded character work and high-energy mass moments.
+              Telugu film, OTT, and television actor delivering grounded character work, high-energy mass moments, comedy, and emotional arcs across all character shades.
             </h1>
             <p className="text-base text-slate-200/90">
-              Known for versatile turns across commercial hits and streaming originals. Comfortable in ensemble casts, comedic timing,
-              and intense action beats; collaborative on set and quick to adapt to directorial tone.
+              Known for versatile turns across commercial hits and streaming originals. Equally at ease with comedy, high-emotion beats,
+              and mass characters; collaborative in ensembles and quick to adapt to a director's tone.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -134,12 +135,12 @@ function Home() {
             <p className="text-xs uppercase tracking-[0.25em] text-amber-200/80">Gallery</p>
             <h2 className="text-lg font-semibold text-white">Stills & Reels</h2>
           </div>
-          <a
-            href="/gallery"
+          <Link
+            to="/gallery"
             className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 hover:text-amber-100"
           >
-            View full gallery →
-          </a>
+            View full gallery ?
+          </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featuredMedia.map((item, idx) => (
@@ -180,3 +181,5 @@ function Home() {
 }
 
 export default Home
+
+

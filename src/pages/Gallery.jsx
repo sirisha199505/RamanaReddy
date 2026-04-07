@@ -1,10 +1,20 @@
 const mediaItems = [
-  { type: 'image', src: '/rr1.jpeg', alt: 'Set still 1' },
-  { type: 'image', src: '/rr2.jpeg', alt: 'Portrait 1', objectPosition: '50% 25%' },
-  { type: 'image', src: '/rr3.jpeg', alt: 'Portrait 2' },
-  { type: 'image', src: '/rr4.jpeg', alt: 'Behind the scenes' },
-  { type: 'pdf', src: '/rr5.pdf', alt: 'rr5 image (PDF)' },
-  { type: 'video', src: '/rr1 video.mp4', alt: 'Showreel clip' },
+  { type: 'image', src: '/rr1.jpeg', alt: 'rr1 portrait', description: 'Character study still with warm studio light.' },
+  { type: 'image', src: '/rr2.jpeg', alt: 'rr2 portrait', description: 'Close-up portrait; soft key with shallow depth.', objectPosition: '50% 25%' },
+  { type: 'image', src: '/rr3.jpeg', alt: 'rr3 portrait', description: 'Outdoor candid with natural rim light.' },
+  { type: 'image', src: '/rr4.jpeg', alt: 'rr4 portrait', description: 'Black-and-white profile, dramatic contrast.' },
+  { type: 'image', src: '/rr5.jpeg', alt: 'rr5 portrait', description: 'Studio half-body with cool fill.' },
+  { type: 'image', src: '/rr6.jpeg', alt: 'rr6 portrait', description: 'Behind-the-scenes capture between takes.' },
+  { type: 'image', src: '/rr7.jpeg', alt: 'rr7 portrait', description: 'Costume detail with textured background.' },
+  { type: 'image', src: '/rr8.jpeg', alt: 'rr8 portrait', description: 'Expressive look with cinematic shadows.' },
+  { type: 'image', src: '/rr9.jpeg', alt: 'rr9 portrait', description: 'Street scene still with neon highlights.' },
+  { type: 'image', src: '/rr10.jpeg', alt: 'rr10 portrait', description: 'Clean studio headshot, neutral palette.' },
+  { type: 'image', src: '/rr11.jpeg', alt: 'rr11 portrait', description: 'Laughing candid, warm evening light.' },
+  { type: 'image', src: '/rr12.jpeg', alt: 'rr12 portrait', description: 'Moody interior with side key.' },
+  { type: 'image', src: '/rr13.jpeg', alt: 'rr13 portrait', description: 'Casual look, soft morning ambience.' },
+  { type: 'image', src: '/rr14.jpeg', alt: 'rr14 portrait', description: 'Wide still showcasing location context.' },
+  { type: 'image', src: '/rr15.jpeg', alt: 'rr15 portrait', description: 'High-key frame with crisp focus.' },
+  { type: 'video', src: '/rr2.mp4', alt: 'rr2 video highlight', description: 'Short reel snippet from rr2 shoot.' },
 ]
 
 function Gallery() {
@@ -61,11 +71,18 @@ function Gallery() {
                 {media}
               </a>
 
-              <div className="flex items-center justify-between px-3 py-2 text-xs text-slate-200/80">
-                <span>{item.alt}</span>
-                <span className="rounded-full bg-amber-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-200">
-                  {item.type}
-                </span>
+              <div className="px-3 py-2">
+                <div className="flex items-center justify-between text-xs text-slate-200/80">
+                  <span>{item.alt}</span>
+                  <span className="rounded-full bg-amber-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-200">
+                    {item.type}
+                  </span>
+                </div>
+                {item.description && (
+                  <p className="mt-1 text-[11px] text-slate-300/80 leading-snug">
+                    {item.description}
+                  </p>
+                )}
               </div>
             </div>
           )
