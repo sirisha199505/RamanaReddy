@@ -139,7 +139,7 @@ function Home() {
             to="/gallery"
             className="inline-flex items-center gap-2 text-sm font-semibold text-amber-200 hover:text-amber-100"
           >
-            View full gallery ?
+            View full gallery --
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
